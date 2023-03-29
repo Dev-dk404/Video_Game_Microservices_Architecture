@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package profile;
+
+message RegisterProfileRequest {
+    string email =1;
+    string password = 2;
+}
+
+message RegisterResponse {
+    string email = 1;
+    bool success = 2;
+}
+
+service Profile {
+    rpc RegisterProfile(RegisterProfileRequest) returns (RegisterResponse){}
+}
