@@ -17,6 +17,6 @@ def browseCatalogue(db):
     print("Game Price:", Catalogue[0]['price']) 
 
 if __name__ == '__main__':
-    db = TinyDB('../../data_store/catalogue.json')
+    db = TinyDB('catalogue.json')
     insertDB(db)
     browseCatalogue(db)
